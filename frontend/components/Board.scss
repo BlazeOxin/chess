@@ -1,0 +1,24 @@
+.board{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+.board-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.chess-block{
+    width: 10vh;
+    height: 10vh;
+    min-width: 48px;
+    min-height: 48px;
+    &.white{
+        background: #fff;
+    }
+    &.black{
+        background: #111;
+    }
+}
