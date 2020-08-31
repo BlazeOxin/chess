@@ -13,7 +13,7 @@ function createWindow() {
     frame: false,
   });
 
-  mainWin.loadFile("main/app.html");
+  mainWin.loadFile("public/app.html");
 
   ipcMain.on(EV.APP_QUIT, (e) => {
     e.sender.send(EV.APP_QUIT_COMPLETE);
