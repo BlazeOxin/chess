@@ -5,9 +5,9 @@
   "main": "main/electron.js",
   "scripts": {
     "e:start": "electron .",
-    "start": "webpack --mode development frontend/index.tsx -o main/app.bundle.js && electron .",
-    "dev": "concurrently \"webpack --mode development frontend/index.tsx -o main/app.bundle.js --watch\" \"electron .\"",
-    "w:build": "webpack --mode production frontend/index.tsx -o main/app.bundle.js",
+    "start": "webpack --mode development frontend/index.tsx -o public/app.bundle.js && electron .",
+    "dev": "concurrently \"webpack --mode development frontend/index.tsx -o public/app.bundle.js --watch\" \"electron .\"",
+    "w:build": "webpack --mode production frontend/index.tsx -o public/app.bundle.js",
     "build": "electron-builder"
   },
   "author": "Nomaan Akhtar",
