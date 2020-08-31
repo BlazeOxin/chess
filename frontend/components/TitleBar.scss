@@ -1,117 +1,121 @@
-.titlebar__wrapper{
-    display: flex;
-    z-index: -1;
-    flex-direction: row;
-    justify-content: flex-start;
-    &.dark{ background: #333; }
-    &.white{ background: #eee; }
-    width: 100%;
-    .app__icon{
-        width: 26px;
-        height: 26px;
-        object-fit: contain;
-        margin-right: 5px;
-        padding: 8px 6px 4px 6px;
-        -webkit-app-region: drag;
-    }
-}
-.app__dragbar{
-    -webkit-app-region: drag;
-}
-.menu__section{
-    display: flex;
-    flex-direction: row;
-}
-.main__menu{
-    position: absolute;
-    position: relative;
-}
-.menu__label{
+.titlebar__wrapper {
+  display: flex;
+  z-index: -1;
+  flex-direction: row;
+  justify-content: flex-start;
+  &.dark {
+    background: #333;
+  }
+  &.white {
+    background: #eee;
+  }
+  width: 100%;
+  .app__icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    margin-right: 5px;
     padding: 8px 6px 4px 6px;
-    border:0px;
-    border-radius: 0px;
-    display: block;
-    height: 100%;
-    outline:none;
-    background:none;
+    -webkit-app-region: drag;
+  }
+}
+.app__dragbar {
+  -webkit-app-region: drag;
+  margin-top: auto;
+}
+.menu__section {
+  display: flex;
+  flex-direction: row;
+}
+.main__menu {
+  position: absolute;
+  position: relative;
+}
+.menu__label {
+  padding: 8px 6px 4px 6px;
+  border: 0px;
+  border-radius: 0px;
+  display: block;
+  height: 100%;
+  outline: none;
+  background: none;
+  color: #aaa;
+  transition: color, background-color 200ms ease-in-out;
+  &:hover,
+  &.active {
+    color: #eee;
+    background: rgba(#fff, 0.3);
+  }
+}
+.menu__dropdowns {
+  position: absolute;
+  background: #333;
+  width: fit-content;
+  padding: 2px 0px;
+  word-wrap: none;
+  box-shadow: 0px 0px 2px rgba(#777, 0.4);
+}
+.dropdown__subsection {
+  border-bottom: 2px solid #ddd;
+  &:last-child {
+    border-bottom: none;
+  }
+  padding: 4px 0px;
+}
+.dropdown__item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.dropdown__label {
+  width: 100%;
+  background: #333;
+  border: none;
+  white-space: nowrap;
+  color: #aaa;
+  padding: 3px 20px;
+  transition: color, background-color 200ms ease-in-out;
+  font-size: 13px;
+  outline: none;
+  &:hover {
+    color: #eee;
+    background: rgba(#fff, 0.3);
+  }
+
+  &.with__subdd {
+    padding-right: 40px;
+  }
+}
+.dropdown__arrow {
+  position: absolute;
+  padding: 0px 3px 0px 1px;
+  color: #ba6622;
+  right: 0px;
+}
+
+.small__dropdown {
+  position: absolute;
+  background: #333;
+  left: 100%;
+  width: fit-content;
+  top: 0px;
+}
+
+.app__controls {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 1;
+  margin-left: auto;
+  & > svg {
+    padding: 10px 8px 5px 8px;
+    width: 18px;
+    height: 23px;
     color: #aaa;
     transition: color, background-color 200ms ease-in-out;
-    &:hover, &.active{
-        color: #eee;
-        background: rgba(#fff, 0.3);
+    &:hover {
+      color: #eee;
+      background: rgba(#fff, 0.3);
     }
+  }
 }
-.menu__dropdowns{
-    position: absolute;
-    background: #333;
-    width: fit-content;
-    padding: 2px 0px;
-    word-wrap: none;
-    box-shadow: 0px 0px 2px rgba(#777, 0.4);
-}
-.dropdown__subsection{
-    border-bottom: 2px solid #ddd;
-    &:last-child{
-        border-bottom: none;
-    }
-    padding: 4px 0px;
-}
-.dropdown__item{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.dropdown__label{
-    width: 100%;
-    background: #333;
-    border: none;
-    white-space: nowrap;
-    color: #aaa;
-    padding: 3px 20px;
-    transition: color, background-color 200ms ease-in-out;
-    font-size: 13px;
-    outline:none;
-    &:hover{
-        color: #eee;
-        background: rgba(#fff, 0.3);
-    }
-
-    &.with__subdd{
-        padding-right: 40px;
-    }
-}
-.dropdown__arrow{
-    position: absolute;
-    padding: 0px 3px 0px 1px;
-    color: #ba6622;
-    right: 0px;
-}
-
-.small__dropdown{
-    position: absolute;
-    background: #333;
-    left: 100%;
-    width: fit-content;
-    top: 0px;
-}
-
-.app__controls{
-    display: flex;
-    flex-direction: row;
-    flex-basis: 1;
-    margin-left: auto;
-    &>svg{
-        padding: 10px 8px 5px 8px;
-        width: 18px;
-        height: 23px;
-        color: #aaa;
-        transition: color, background-color 200ms ease-in-out;
-        &:hover{
-            color: #eee;
-            background: rgba(#fff, 0.3);
-        }
-    }
-}
-
-
